@@ -6,8 +6,6 @@ const buttonElem = document.getElementById('add-book-button');
 let mybooks = [];
 let thebooks = [];
 
-
-
 /* eslint-disable no-use-before-define */
 
 function updateBooks() {
@@ -19,8 +17,6 @@ function updateBooks() {
       <button class="remove-book-button">Remove</button>
       <hr>
     </div>`).join('');
-  } else {
-
   }
 
   const deleteButtons = document.querySelectorAll('.remove-book-button');
