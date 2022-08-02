@@ -13,7 +13,17 @@
     <div class="books-container">
     </div>
     <form class="book-entry">
-      
+      <ul class="form-elements-list" id="form-elements-list" style="list-style: none;">
+        <li>
+          <input class="book-title" type="text" id="book-title" placeholder="Title" maxlength="30" required>
+        </li>
+        <li>
+          <input class="book-author" type="text" id="book-author" placeholder="Author" maxlength="30" required>
+        </li>
+        <li>
+          <button class="add-book-button" onclick="addBook()">Add Book</button>
+        </li>
+      </ul>
     </form>
     <script src="script.js"></script>
   </body>
