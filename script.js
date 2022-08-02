@@ -49,7 +49,6 @@ function addBook() {
   const newAuthor = authorElem.value;
   const newBook = { title: newTitle, author: newAuthor };
   thebooks.push(newBook);
-  console.log(thebooks);
   localStorage.setItem('books', JSON.stringify(thebooks));
   updateBooks();
 }
@@ -60,10 +59,9 @@ function deleteBook(el) {
   const titleToDelete = el.previousElementSibling.previousElementSibling.textContent;
   const authorToDelete = el.previousElementSibling.textContent;
   thebooks = JSON.parse(localStorage.getItem('books'));
-  console.log(index);
   result.splice(index, 1);
   localStorage.setItem('books', JSON.stringify(result));
   updateBooks();
 }
 
-buttonElem.addEventListener ('click',addBook);
+buttonElem.addEventListener('click', addBook);
