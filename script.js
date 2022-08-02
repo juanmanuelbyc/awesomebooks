@@ -1,20 +1,12 @@
 // localStorage.clear();
 const titleElem = document.getElementById('book-title');
 const authorElem = document.getElementById('book-author');
-const buttonElem = document.getElementsByClassName('add-book-button');
+const buttonElem = document.getElementById('add-book-button');
+
 let mybooks = [];
 let thebooks = [];
 
-const initialBooks = [
-  {
-    title: 'Lorem ipsum',
-    author: 'Testero Testyy',
-  },
-  {
-    title: 'Second book',
-    author: 'Testero Testyy',
-  },
-];
+
 
 /* eslint-disable no-use-before-define */
 
@@ -28,8 +20,7 @@ function updateBooks() {
       <hr>
     </div>`).join('');
   } else {
-    const firstBooks = JSON.stringify(initialBooks);
-    localStorage.setItem('books', firstBooks);
+
   }
 
   const deleteButtons = document.querySelectorAll('.remove-book-button');
