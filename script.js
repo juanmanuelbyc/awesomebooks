@@ -41,3 +41,26 @@ deleteButtons.forEach((el) => {
 
 updateBooks();
 
+function addBook() {
+  thebooks = JSON.parse(localStorage.getItem('books'));
+  const result = Object.values(thebooks);
+  const newTitle = titleElem.value;
+  const newAuthor = authorElem.value;
+  const newBook = {title: newTitle, author: newAuthor};
+  thebooks.push(newBook);
+  console.log(thebooks);
+  localStorage.setItem('books', JSON.stringify(thebooks));
+  updateBooks();
+}
+
+function deleteBook(el) {
+  const titleToDelete = el.previousElementSibling.previousElementSibling.textContent;
+  const authorToDelete = el.previousElementSibling.textContent;
+  thebooks = JSON.parse(localStorage.getItem('books'));
+  var result = Object.values(thebooks);
+  var index = result.findIndex(p => p.title == titleToDelete && p.author == authorToDelete);
+  console.log(index);
+  result.splice(index,1);
+  localStorage.setItem('books', JSON.stringify(result));
+  updateBooks();
+}
