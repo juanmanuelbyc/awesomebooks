@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>awesome books</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <!-- Body (Page Content) -->
@@ -13,7 +14,7 @@
     <div class="books-container">
     </div>
     <form class="book-entry">
-      <ul class="form-elements-list" id="form-elements-list" style="list-style: none;">
+      <ul class="form-elements-list" id="form-elements-list">
         <li>
           <input class="book-title" type="text" id="book-title" placeholder="Title" maxlength="30" required>
         </li>
@@ -21,7 +22,7 @@
           <input class="book-author" type="text" id="book-author" placeholder="Author" maxlength="30" required>
         </li>
         <li>
-          <button class="add-book-button" onclick="addBook()">Add Book</button>
+          <button class="add-book-button">Add Book</button>
         </li>
       </ul>
     </form>
